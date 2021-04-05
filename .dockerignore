@@ -1,0 +1,10 @@
+.git
+.idea
+.cache
+.DS_Store
+
+api_validation
+docs
+
+*.md
+!README.md
