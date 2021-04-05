@@ -1,5 +1,5 @@
 # SWAPI Backend Server
-Submission for a take-home challenge, to build a local backend server in Python with Flask and a WSGI server on top of a 
+Submission for a code challenge, to build a local backend server in Python with Flask and a WSGI server on top of a 
 public REST API.
 
 # Table of Contents
@@ -22,9 +22,9 @@ Clone this repository with the following:
 
     $ git clone https://github.com/samlarson/swapi-backend.git
 
-If you want to modify and test locally, install the Python packages specified in requirements.txt:
+If you want to modify and test locally, install the Python packages specified in *requirements.txt*:
 
-    $ pip3 install -r /requirements.txt
+    $ pip3 install -r requirements.txt
 
 <a name="section-1-2"></a>
 ### 2. Run
@@ -89,18 +89,17 @@ WSGI server for Python
 - *Pytest [(Docs)](https://docs.pytest.org/en/stable/contents.html#toc) :* 
 Testing framework for Python
 
-At the base directory of the project, there four important files and two sub-directories:
+The list below describes the structure of files and sub-directories, from the root of this project:
     
-    * README.md: The documentation you're reading
+    * README.md: The documentation that you're reading
     * Dockerfile: The configuration file of the Docker image used to run the container
     * requirements.txt: The Python packages required to run the app (installed via pip)
-    * run.sh: The entrypoint for the container, which executes tests and starts the WISG server Gunicorn
-    
-    * 'docs' directory: Contains images included in documentation
-    * 'app' directory: Contains all of the Python code for the project
+    * run.sh: The entrypoint for the container, which executes pytest and starts the WISG server Gunicorn
+    * docs (Directory): Contains images included in documentation
+    * app (Directory): Contains all of the Python code for the project
         * api_functions.py: The class and functions responsible for calling SWAPI and formatting serialized JSON
-        * backend.py: Flask application initialization and the functions that define the server routes
-        * 'tests' directory: Contains the pytest code
+        * backend.py: Flask application initialization, and the functions that define the server routes and return deserialized JSON
+        * tests (Directory): Contains the pytest code
             * test_backend.py: Test functions for SWAPI and the flask app
 
 
